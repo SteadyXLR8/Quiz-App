@@ -1,6 +1,5 @@
-../*.pdf
-../*.txt
-../*.docx
+*.pdf
+*.txt
 
 /node_modules
 /build
