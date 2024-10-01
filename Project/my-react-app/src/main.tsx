@@ -8,14 +8,15 @@ import {
 //import App from './App.tsx'
 
 import './index.css'
-import Root from "./routes/root.tsx"
+import Root, { loader as rootLoader } from "./routes/root.tsx"
 import ErrorPage from "./error-page.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: <ErrorPage />
+    errorElement: <ErrorPage />,
+    loader: rootLoader
   }
 ])
 
@@ -24,3 +25,4 @@ createRoot(document.getElementById('root')!).render(
     <RouterProvider router={router}/>
   </StrictMode>,
 )
+
